@@ -7,3 +7,6 @@
 [submodule "notebook_root/ipython-bootcamp"]
 	path = notebook_root/ipython-bootcamp
 	url = git@github.com:MITSloanDataAnalytics/ipython-bootcamp.git
+[submodule "notebook_root/my_notebooks"]
+	path = notebook_root/my_notebooks
+	url = git@bitbucket.org:hagino_3000/my-ipython-notebooks.git
