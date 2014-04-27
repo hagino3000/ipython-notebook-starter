@@ -1,0 +1,3 @@
+[submodule "notebook_root/scientific-python-lectures"]
+	path = notebook_root/scientific-python-lectures
+	url = git@github.com:jrjohansson/scientific-python-lectures.git
