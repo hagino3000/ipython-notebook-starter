@@ -4,3 +4,6 @@
 [submodule "notebook_root/LearnDataScience"]
 	path = notebook_root/LearnDataScience
 	url = https://github.com/rossant/LearnDataScience.git
+[submodule "notebook_root/ipython-bootcamp"]
+	path = notebook_root/ipython-bootcamp
+	url = git@github.com:MITSloanDataAnalytics/ipython-bootcamp.git
