@@ -57,3 +57,5 @@ share/
 man/
 include/
 local/
+
+.ipynb_checkpoints
