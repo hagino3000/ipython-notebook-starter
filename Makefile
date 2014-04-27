@@ -1,11 +1,12 @@
 
-install:
+setup_python:
 	virtualenv .
-	./bin/pip install --use-wheel -r requirements.txt
+	./bin/pip install -r requirements.txt
 
-setup: install
+external_notebooks:
 	git submodule init
 	git submodule update
+	find notebook_root -name '*.ipynb' -print0 | xargs -0 ./bin/ipython trust
 
 profile:
 	./bin/ipython profile create
