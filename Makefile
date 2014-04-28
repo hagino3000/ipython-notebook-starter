@@ -1,6 +1,8 @@
 
 setup_python:
 	virtualenv .
+	./bin/pip install --upgrade distribute
+	./bin/pip install --upgrade setuptools
 	./bin/pip install -r requirements.txt
 
 external_notebooks:
