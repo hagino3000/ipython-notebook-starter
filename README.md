@@ -1,11 +1,8 @@
-# Quick Start for iPython notebook
+# iPython notebook quick start
 
 Startup sets for MacOSX or Linux
 
 ## Requirements
-
-- Python
-- virtualenv
 
 ```
 # Ubuntu or Debian
