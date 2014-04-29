@@ -1,3 +1,4 @@
+.PHONY: setup_python profile external_notebooks start
 
 setup_python:
 	pip install --upgrade distribute
@@ -10,7 +11,8 @@ external_notebooks:
 	#find notebook_root -name '*.ipynb' -print0 | xargs -0 ./bin/ipython trust
 
 profile:
-	ipython profile create
+	mkdir -p profile
+	ipython profile create --profile-dir=${CURDIR}/profile
 
 start:
-	cd notebook_root;ipython notebook --ip=\* --no-browser --profile=default
+	cd notebook_root;ipython notebook --no-browser --profile-dir=${CURDIR}/profile --profile=default

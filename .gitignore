@@ -58,4 +58,6 @@ man/
 include/
 local/
 
+# iPython
+profile
 .ipynb_checkpoints
