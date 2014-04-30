@@ -58,6 +58,9 @@ man/
 include/
 local/
 
+# pyenv
+.python-version
+
 # iPython
 profile
 .ipynb_checkpoints
