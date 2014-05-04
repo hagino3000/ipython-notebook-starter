@@ -15,4 +15,4 @@ profile:
 	ipython profile create --profile-dir=${CURDIR}/profile
 
 start:
-	cd notebook_root;ipython notebook --no-browser --profile-dir=${CURDIR}/profile --profile=default
+	ipython notebook --no-browser --notebook-dir=${CURDIR}/notebook_root --profile-dir=${CURDIR}/profile --profile=default
