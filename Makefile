@@ -12,10 +12,10 @@ external_notebooks:
 
 profile:
 	mkdir -p profile
+	mkdir -p .ipython
 	IPYTHONDIR=${CURDIR}/.ipython ipython profile create --profile-dir=${CURDIR}/profile
-
-mathjax:
 	IPYTHONDIR=${CURDIR}/.ipython ipython -c "from IPython.external import mathjax; mathjax.install_mathjax()"
+
 
 start:
 	IPYTHONDIR=${CURDIR}/.ipython ipython notebook --no-browser --notebook-dir=${CURDIR}/notebook_root --profile-dir=${CURDIR}/profile --profile=default
