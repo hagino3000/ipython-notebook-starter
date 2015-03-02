@@ -1,66 +1,25 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+# Generate python
+*.pyc
+*.pyo
 
-# C extensions
-*.so
+# Generate virtualenv
+bin
+include
+lib
+lib64
+share
+man
+src
 
-# Distribution / packaging
-.Python
-env/
-bin/
-build/
-develop-eggs/
-dist/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+# Generate [make profile]
+.ipython
+profile/pid
+profile/security
+profile/db
+profile/log
+profile/history.sqlite
+profile/setup
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# Generate [make notebook_root]
+notebook_root
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.cache
-nosetests.xml
-coverage.xml
-
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-
-# Rope
-.ropeproject
-
-# Django stuff:
-*.log
-*.pot
-
-# Sphinx documentation
-docs/_build/
-
-# Virtualenv
-share/
-man/
-include/
-local/
-
-# pyenv
-.python-version
-
-# iPython
-profile
-.ipynb_checkpoints
