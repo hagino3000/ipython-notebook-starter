@@ -30,8 +30,8 @@ c = get_config()
 # lines of code to run at IPython startup.
 # c.InteractiveShellApp.exec_lines = []
 
-# Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',
-# 'osx', 'pyglet', 'qt', 'qt4', 'tk', 'wx').
+# Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'osx',
+# 'pyglet', 'qt', 'qt5', 'tk', 'wx').
 # c.InteractiveShellApp.gui = None
 
 # Pre-load matplotlib and numpy for interactive use, selecting a particular
@@ -139,7 +139,7 @@ c = get_config()
 
 # The name of the IPython directory. This directory is used for logging
 # configuration (through profiles), history storage, etc. The default is usually
-# $HOME/.ipython. This options can also be specified through the environment
+# $HOME/.ipython. This option can also be specified through the environment
 # variable IPYTHONDIR.
 # c.TerminalIPythonApp.ipython_dir = u''
 
@@ -155,8 +155,8 @@ c = get_config()
 # List of files to run at IPython startup.
 # c.TerminalIPythonApp.exec_files = []
 
-# Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',
-# 'osx', 'pyglet', 'qt', 'qt4', 'tk', 'wx').
+# Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'osx',
+# 'pyglet', 'qt', 'qt5', 'tk', 'wx').
 # c.TerminalIPythonApp.gui = None
 
 # A list of dotted module names of IPython extensions to load.
@@ -198,6 +198,10 @@ c = get_config()
 # Set the color scheme (NoColor, Linux, or LightBG).
 # c.TerminalInteractiveShell.colors = 'LightBG'
 
+# If True, anything that would be passed to the pager will be displayed as
+# regular output instead.
+# c.TerminalInteractiveShell.display_page = False
+
 # Autoindent IPython code entered interactively.
 # c.TerminalInteractiveShell.autoindent = True
 
@@ -238,7 +242,7 @@ c = get_config()
 # c.TerminalInteractiveShell.prompts_pad_left = True
 
 # The part of the banner to be printed before the profile
-# c.TerminalInteractiveShell.banner1 = 'Python 2.7.3 (default, Dec 18 2012, 17:22:10) \nType "copyright", "credits" or "license" for more information.\n\nIPython 2.0.0 -- An enhanced Interactive Python.\n?         -> Introduction and overview of IPython\'s features.\n%quickref -> Quick reference.\nhelp      -> Python\'s own help system.\nobject?   -> Details about \'object\', use \'object??\' for extra details.\n'
+# c.TerminalInteractiveShell.banner1 = 'Python 2.7.9 (default, Feb 10 2015, 03:29:19) \nType "copyright", "credits" or "license" for more information.\n\nIPython 3.0.0 -- An enhanced Interactive Python.\n?         -> Introduction and overview of IPython\'s features.\n%quickref -> Quick reference.\nhelp      -> Python\'s own help system.\nobject?   -> Details about \'object\', use \'object??\' for extra details.\n'
 
 # 
 # c.TerminalInteractiveShell.readline_parse_and_bind = ['tab: complete', '"\\C-l": clear-screen', 'set show-all-if-ambiguous on', '"\\C-o": tab-insert', '"\\C-r": reverse-search-history', '"\\C-s": forward-search-history', '"\\C-p": history-search-backward', '"\\C-n": history-search-forward', '"\\e[A": history-search-backward', '"\\e[B": history-search-forward', '"\\C-k": kill-line', '"\\C-u": unix-line-discard']
@@ -434,8 +438,10 @@ c = get_config()
 # 
 # c.PlainTextFormatter.type_printers = {}
 
+# Truncate large collections (lists, dicts, tuples, sets) to this size.
 # 
-# c.PlainTextFormatter.newline = '\n'
+# Set to 0 to disable truncation.
+# c.PlainTextFormatter.max_seq_length = 1000
 
 # 
 # c.PlainTextFormatter.float_precision = ''
@@ -447,10 +453,13 @@ c = get_config()
 # c.PlainTextFormatter.deferred_printers = {}
 
 # 
-# c.PlainTextFormatter.pprint = True
+# c.PlainTextFormatter.newline = '\n'
 
 # 
 # c.PlainTextFormatter.max_width = 79
+
+# 
+# c.PlainTextFormatter.pprint = True
 
 # 
 # c.PlainTextFormatter.singleton_printers = {}
