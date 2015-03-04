@@ -11,6 +11,9 @@ share
 man
 src
 
+# Generate pyenv
+.python-version
+
 # Generate [make profile]
 .ipython
 profile/pid
