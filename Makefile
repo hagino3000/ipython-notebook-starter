@@ -19,3 +19,8 @@ profile:
 
 start:
 	IPYTHONDIR=${CURDIR}/.ipython ipython notebook --no-browser --notebook-dir=${CURDIR}/notebook_root --profile-dir=${CURDIR}/profile --profile=default
+
+src := INPUT_ME
+convert:
+	IPYTHONDIR=${CURDIR}/.ipython ipython nbconvert $(src) --to=html --profile-dir=${CURDIR}/profile --profile=default
+
