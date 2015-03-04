@@ -1,6 +1,6 @@
-.PHONY: setup_python profile external_notebooks start
+.PHONY: setup profile external_notebooks start
 
-setup_python:
+setup:
 	pip install --upgrade distribute
 	pip install --upgrade setuptools
 	pip install --upgrade -r requirements.txt
