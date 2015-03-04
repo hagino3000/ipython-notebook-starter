@@ -121,7 +121,7 @@ c = get_config()
 # c.IPKernelApp.ipython_dir = u''
 
 # Configure matplotlib for interactive use with the default matplotlib backend.
-# c.IPKernelApp.matplotlib = None
+c.IPKernelApp.matplotlib = 'inline'
 
 # ONLY USED ON WINDOWS Interrupt this process when the parent is signaled.
 # c.IPKernelApp.interrupt = 0
@@ -150,6 +150,33 @@ c = get_config()
 
 # set the iopub (PUB) port [default: random]
 # c.IPKernelApp.iopub_port = 0
+
+#------------------------------------------------------------------------------
+# InlineBackend configuration
+#------------------------------------------------------------------------------
+
+# An object to store configuration of the inline backend.
+
+c.InlineBackend.rc = {
+    'font.size': 11,
+    'font.family': 'Hiragino Kaku Gothic ProN',
+    'figure.figsize': (6.0, 4.0),
+    'figure.facecolor': (1, 1, 1, 0),
+    'savefig.dpi': 80,
+    'savefig.bbox':'tight',
+    'savefig.pad_inches'  : 0.2,
+    'figure.subplot.bottom': 0.125,
+    'figure.edgecolor': (1, 1, 1, 0),
+    'axes.edgecolor': (0.5, 0.5, 0.5, 1),
+    'axes.facecolor': (0.97, 0.97, 0.97, 1),
+    'axes.titlesize': 12,
+    'xtick.major.pad': 6,
+    'ytick.major.pad': 6
+}
+
+# A set of figure formats to enable: 'png',  'retina', 'jpeg', 'svg', 'pdf'.
+c.InlineBackend.figure_formats = set(['png', 'retina'])
+
 
 #------------------------------------------------------------------------------
 # IPythonKernel configuration
