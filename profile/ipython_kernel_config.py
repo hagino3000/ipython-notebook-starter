@@ -159,19 +159,19 @@ c.IPKernelApp.matplotlib = 'inline'
 
 c.InlineBackend.rc = {
     'font.size': 11,
-    'font.family': 'Hiragino Kaku Gothic ProN',
+    'font.family': 'Osaka',
     'figure.figsize': (6.0, 4.0),
-    'figure.facecolor': (1, 1, 1, 0),
+#    'figure.facecolor': (1, 1, 1, 0),
     'savefig.dpi': 80,
-    'savefig.bbox':'tight',
-    'savefig.pad_inches'  : 0.2,
-    'figure.subplot.bottom': 0.125,
-    'figure.edgecolor': (1, 1, 1, 0),
-    'axes.edgecolor': (0.5, 0.5, 0.5, 1),
-    'axes.facecolor': (0.97, 0.97, 0.97, 1),
+#    'savefig.bbox':'tight',
+#    'savefig.pad_inches'  : 0.2,
+#    'figure.subplot.bottom': 0.125,
+#    'figure.edgecolor': (1, 1, 1, 0),
+#    'axes.edgecolor': (0.5, 0.5, 0.5, 1),
+#    'axes.facecolor': (0.97, 0.97, 0.97, 1),
     'axes.titlesize': 12,
-    'xtick.major.pad': 6,
-    'ytick.major.pad': 6
+#    'xtick.major.pad': 6,
+#    'ytick.major.pad': 6
 }
 
 # A set of figure formats to enable: 'png',  'retina', 'jpeg', 'svg', 'pdf'.
