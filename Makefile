@@ -8,17 +8,20 @@ setup:
 external_notebooks:
 	git submodule init
 	git submodule update
-	#find notebook_root -name '*.ipynb' -print0 | xargs -0 ./bin/ipython trust
 
 profile:
-	mkdir -p profile
 	mkdir -p .ipython
-	IPYTHONDIR=${CURDIR}/.ipython ipython profile create --profile-dir=${CURDIR}/profile
-	IPYTHONDIR=${CURDIR}/.ipython ipython -c "from IPython.external import mathjax; mathjax.install_mathjax()"
+	IPYTHONDIR=${CURDIR}/.ipython ipython profile create
+	-IPYTHONDIR=${CURDIR}/.ipython ipython -c "from IPython.external import mathjax; mathjax.install_mathjax()"
 
+ipython:
+	IPYTHONDIR=${CURDIR}/.ipython ipython
 
 start:
-	IPYTHONDIR=${CURDIR}/.ipython ipython notebook --notebook-dir=${CURDIR}/notebook_root --profile-dir=${CURDIR}/profile
+	IPYTHONDIR=${CURDIR}/.ipython jupyter-notebook\
+		--notebook-dir=${CURDIR}/notebook_root\
+		--browser=no\
+		--config=${CURDIR}/.jupyter/jupyter_notebook_config.py
 
 src := INPUT_ME
 convert:

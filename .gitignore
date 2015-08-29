@@ -15,13 +15,13 @@ src
 .python-version
 
 # Generate [make profile]
-.ipython
-profile/pid
-profile/security
-profile/db
-profile/log
-profile/history.sqlite
-profile/setup
+.ipython/extensions
+.ipython/nbextensions
+.ipython/profile_default/pid
+.ipython/profile_default/security
+.ipython/profile_default/db
+.ipython/profile_default/log
+.ipython/profile_default/history.sqlite
 
 # Generate [make notebook_root]
 notebook_root
