@@ -7,3 +7,6 @@
 [submodule "notebook_root/ipython-bootcamp"]
 	path = notebook_root/ipython-bootcamp
 	url = git@github.com:MITSloanDataAnalytics/ipython-bootcamp.git
+[submodule "extensions/RISE"]
+	path = extensions/RISE
+	url = git@github.com:damianavila/RISE.git
