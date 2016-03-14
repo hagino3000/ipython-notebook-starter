@@ -140,7 +140,8 @@ c.InlineBackend.rc = {
 }
 
 # A set of figure formats to enable: 'png',  'retina', 'jpeg', 'svg', 'pdf'.
-c.InlineBackend.figure_formats = set(['png', 'retina'])
+#c.InlineBackend.figure_formats = set(['png', 'retina'])
+c.InlineBackend.figure_formats = set(['png'])
 
 #------------------------------------------------------------------------------
 # SingletonConfigurable configuration
