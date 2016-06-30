@@ -36,7 +36,7 @@
 # c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
 # Set the log level by value or name.
-# c.Application.log_level = 30
+c.Application.log_level = 'INFO'
 
 #------------------------------------------------------------------------------
 # JupyterApp configuration
@@ -131,8 +131,8 @@
 # When disabled, equations etc. will appear as their untransformed TeX source.
 # c.NotebookApp.enable_mathjax = True
 
-# extra paths to look for Javascript notebook extensions
-# c.NotebookApp.extra_nbextensions_path = []
+# Reraise exceptions encountered loading server extensions?
+c.NotebookApp.reraise_server_extension_failures = True
 
 # Extra paths to search for serving static files.
 # 
@@ -202,6 +202,12 @@
 
 # The port the notebook server will listen on.
 # c.NotebookApp.port = 8888
+
+# extra paths to look for Javascript notebook extensions
+c.NotebookApp.extra_nbextensions_path = [
+    '/User/tnishibayashi/dev/ipython-notebook-bootstrap/.ipython/nbextensions',
+    '/User/tnishibayashi/dev/ipython-notebook-bootstrap/extensions/RISE'
+]
 
 # The number of additional ports to try if the specified port is not available.
 # c.NotebookApp.port_retries = 50

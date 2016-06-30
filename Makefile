@@ -21,6 +21,9 @@ profile:
 	mkdir -p .ipython
 	IPYTHONDIR=${CURDIR}/.ipython ipython profile create
 
+install_extensions:
+	JUPYTER_CONFIG_DIR=${CURDIR}/.jupyter cd ${CURDIR}/extensions/RISE & python setup.py install
+
 ipython:
 	IPYTHONDIR=${CURDIR}/.ipython ipython
 
