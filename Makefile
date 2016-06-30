@@ -1,9 +1,9 @@
 .PHONY: setup jupyter_drive nbextensions profile external_notebooks start
 
 setup:
-	pip install --upgrade distribute
-	pip install --upgrade setuptools
-	pip install --upgrade -r requirements.txt
+	pyenv local anaconda3-4.0.0
+	pyenv rehash
+	pip install bigquery
 
 external_notebooks:
 	git submodule init
@@ -25,7 +25,7 @@ ipython:
 	IPYTHONDIR=${CURDIR}/.ipython ipython
 
 start:
-	IPYTHONDIR=${CURDIR}/.ipython jupyter-notebook\
+	IPYTHONDIR=${CURDIR}/.ipython jupyter notebook\
 		--notebook-dir=${CURDIR}/notebook_root\
 		--browser=no\
 
