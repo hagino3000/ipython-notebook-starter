@@ -3,7 +3,7 @@
 setup:
 	pyenv local anaconda3-4.0.0
 	pyenv rehash
-	pip install bigquery
+	pip install google-api-python-client
 
 external_notebooks:
 	git submodule init
