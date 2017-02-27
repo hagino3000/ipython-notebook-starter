@@ -1,0 +1,12 @@
+numexpr
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+tqdm
+arrow
+jupyter
+google-api-python-client
+requests

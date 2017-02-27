@@ -10,6 +10,7 @@ lib64
 share
 man
 src
+env
 
 # Generate pyenv
 .python-version
