@@ -9,11 +9,6 @@ external_notebooks:
 	git submodule init
 	git submodule update
 
-jupyter_drive:
-	git clone git://github.com/jupyter/jupyter-drive.git
-	pip install -e jupyter-drive
-	python -m jupyterdrive --mixed
-
 nbextensions:
 	pip install https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip
 
