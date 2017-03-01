@@ -9,6 +9,7 @@ statsmodels
 tqdm
 arrow
 jupyter
+ipykernel
 google-api-python-client
 requests
 mysqlclient
