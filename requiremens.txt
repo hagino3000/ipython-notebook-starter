@@ -10,3 +10,4 @@ arrow
 jupyter
 google-api-python-client
 requests
+mysqlclient
