@@ -4,12 +4,10 @@ Startup sets for MacOSX or Linux
 
 ## Requirements
 
-```
-# Ubuntu or Debian
-$ ./pre_requirements_debian.sh
+MacOSX
 
-# MacOSX
-$ ./pre_requirements_mac.sh
+```
+brew install mysql-connector-c
 ```
 
 ## How to use
