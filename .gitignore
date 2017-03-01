@@ -16,6 +16,8 @@ env
 .python-version
 
 # Generate [make profile]
+.ipython/README
+.ipython/cython
 .ipython/extensions
 .ipython/nbextensions
 .ipython/profile_default/pid
