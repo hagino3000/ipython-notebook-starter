@@ -3,6 +3,7 @@ cython
 numexpr
 numpy
 pandas
+pandas_gbq
 matplotlib
 seaborn
 scikit-learn
@@ -14,5 +15,4 @@ ipykernel
 google-api-python-client
 pandoc
 requests
-mysqlclient
 xlwt
