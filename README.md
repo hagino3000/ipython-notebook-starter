@@ -1,4 +1,4 @@
-# iPython notebook quick starter
+# Jupyter notebook quick starter
 
 Startup sets for MacOSX or Linux
 
