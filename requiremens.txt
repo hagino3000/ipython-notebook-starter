@@ -3,7 +3,7 @@ cython
 numexpr
 numpy
 pandas
-pandas_gbq
+pandas-gbq
 matplotlib
 seaborn
 scikit-learn
