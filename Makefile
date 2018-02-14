@@ -1,6 +1,7 @@
 .PHONY: setup nbextensions profile external_notebooks start
 
 VIRTUALENV=/usr/local/bin/virtualenv
+INTELMKL=/opt/intel/mkl/lib
 
 setup:
 	${VIRTUALENV} ./env
@@ -20,6 +21,11 @@ profile:
 
 install_extensions:
 	JUPYTER_CONFIG_DIR=${CURDIR}/.jupyter cd ${CURDIR}/extensions/RISE & python setup.py install
+
+numpy_with_mkl:
+	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
+	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install numpy --no-binary numpy
+	LD_LIBRARY_PATH=$(INTELMKL) python -c "import numpy; print(numpy.show_config())"
 
 ipython:
 	IPYTHONDIR=${CURDIR}/.ipython ./env/bin/ipython
