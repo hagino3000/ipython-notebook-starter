@@ -125,7 +125,7 @@ c.InteractiveShellApp.matplotlib = 'inline'
 c.InlineBackend.rc = {
     'font.size': 11,
     'font.family': 'Osaka',
-    'figure.figsize': (6.0, 4.0),
+    'figure.figsize': (5.0, 3.0),
 #    'figure.facecolor': (1, 1, 1, 0),
     'savefig.dpi': 80,
 #    'savefig.bbox':'tight',

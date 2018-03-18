@@ -205,8 +205,6 @@ c.NotebookApp.reraise_server_extension_failures = True
 
 # extra paths to look for Javascript notebook extensions
 c.NotebookApp.extra_nbextensions_path = [
-    '/User/tnishibayashi/dev/ipython-notebook-bootstrap/.ipython/nbextensions',
-    '/User/tnishibayashi/dev/ipython-notebook-bootstrap/extensions/RISE'
 ]
 
 # The number of additional ports to try if the specified port is not available.
