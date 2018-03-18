@@ -122,9 +122,14 @@ c.InteractiveShellApp.matplotlib = 'inline'
 
 # An object to store configuration of the inline backend.
 
+import os
+is_ubuntu = 'Ubuntu' in str(os.uname())
+
+font_family = 'IPAPGothic' if is_ubuntu else 'Osaka'
+
 c.InlineBackend.rc = {
     'font.size': 11,
-    'font.family': 'Osaka',
+    'font.family': font_family,
     'figure.figsize': (5.0, 3.0),
 #    'figure.facecolor': (1, 1, 1, 0),
     'savefig.dpi': 80,
