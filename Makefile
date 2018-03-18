@@ -20,11 +20,16 @@ profile:
 	mkdir -p .ipython
 	IPYTHONDIR=${CURDIR}/.ipython ./env/bin/ipython profile create
 
-.PHONY: numpy_with_mkl
-numpy_with_mkl:
+.PHONY: mkl/*
+mkl/numpy:
 	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
 	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install numpy --no-binary numpy
 	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/python -c "import numpy; print(numpy.show_config())"
+
+mkl/scipy:
+	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
+	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install scipy --no-binary scipy
+	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/python -c "import scipy; print(scipy.show_config())"
 
 .PHONY: ipython
 ipython:
