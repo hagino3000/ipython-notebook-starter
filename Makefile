@@ -32,8 +32,9 @@ ipython:
 
 .PHONY: start
 start:
-	IPYTHONDIR=${CURDIR}/.ipython ./env/bin/jupyter notebook\
+	LD_LIBRARY_PATH=$(INTELMKL) IPYTHONDIR=${CURDIR}/.ipython ./env/bin/jupyter notebook\
 		--notebook-dir=${CURDIR}/notebook_root\
+		--ip=0.0.0.0\
 		--browser=no\
 
 .PHONY: convert
