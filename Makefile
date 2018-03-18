@@ -1,12 +1,14 @@
 
 VIRTUALENV:=/usr/local/bin/virtualenv
-INTELMKL=/opt/intel/mkl/lib
+INTELMKL:=/opt/intel/mkl/lib/intel64/
 
-.PHONY: setup
-setup:
+env:
 	${VIRTUALENV} ./env
+
+.PHONY: requirements
+requirements: env
 	./env/bin/pip install pip -U
-	./env/bin/pip install -r requirements.txt
+	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install -r requirements.txt
 
 .PHONY: external_notebooks
 external_notebooks:
@@ -22,7 +24,7 @@ profile:
 numpy_with_mkl:
 	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
 	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install numpy --no-binary numpy
-	LD_LIBRARY_PATH=$(INTELMKL) python -c "import numpy; print(numpy.show_config())"
+	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/python -c "import numpy; print(numpy.show_config())"
 
 .PHONY: ipython
 ipython:
