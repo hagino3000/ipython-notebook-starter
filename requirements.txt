@@ -1,8 +1,10 @@
 arrow
 Bottleneck
+cmake
 cython
 ipykernel
 jupyter
+kaggle
 matplotlib
 numexpr
 numpy
