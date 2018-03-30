@@ -2,6 +2,8 @@ arrow
 Bottleneck
 cmake
 cython
+dask
+dask[dataframe]
 ipykernel
 jupyter
 kaggle
@@ -11,6 +13,7 @@ numpy
 pandas
 pandas-gbq
 pandoc
+pyarrow
 seaborn
 scikit-learn
 scipy

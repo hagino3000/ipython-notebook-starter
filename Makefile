@@ -1,14 +1,29 @@
-
-VIRTUALENV:=/usr/local/bin/virtualenv
+VIRTUALENV:=virtualenv
 INTELMKL:=/opt/intel/mkl/lib/intel64/
+PIP:=./env/bin/pip
+PYTHON:=./env/bin/python3
 
 env:
-	${VIRTUALENV} ./env
+	${VIRTUALENV} ./env -p python3.6
 
 .PHONY: requirements
 requirements: env
-	./env/bin/pip install pip -U
-	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install -r requirements.txt
+	$(PIP) install pip -U
+	LD_LIBRARY_PATH=$(INTELMKL) $(PIP) install -r requirements.txt
+
+.PHONY: enhanced/*
+enhanced/numpy:
+	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
+	LD_LIBRARY_PATH=$(INTELMKL) $(PIP) install numpy --no-binary numpy
+	LD_LIBRARY_PATH=$(INTELMKL) $(PYTHON) -c "import numpy; print(numpy.show_config())"
+
+enhanced/scipy:
+	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
+	LD_LIBRARY_PATH=$(INTELMKL) $(PIP) install scipy --no-binary scipy
+	LD_LIBRARY_PATH=$(INTELMKL) $(PYTHON) -c "import scipy; print(scipy.show_config())"
+
+enhanced/lightgbm:
+	$(PIP) install lightgbm --install-option=--gpu
 
 .PHONY: external_notebooks
 external_notebooks:
@@ -19,17 +34,6 @@ external_notebooks:
 profile:
 	mkdir -p .ipython
 	IPYTHONDIR=${CURDIR}/.ipython ./env/bin/ipython profile create
-
-.PHONY: mkl/*
-mkl/numpy:
-	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
-	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install numpy --no-binary numpy
-	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/python -c "import numpy; print(numpy.show_config())"
-
-mkl/scipy:
-	-ln -s ${CURDIR}/.numpy-site.cfg ~/.numpy-site.cfg
-	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/pip install scipy --no-binary scipy
-	LD_LIBRARY_PATH=$(INTELMKL) ./env/bin/python -c "import scipy; print(scipy.show_config())"
 
 .PHONY: ipython
 ipython:
