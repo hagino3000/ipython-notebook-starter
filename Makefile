@@ -37,7 +37,7 @@ profile:
 
 .PHONY: ipython
 ipython:
-	IPYTHONDIR=${CURDIR}/.ipython ./env/bin/ipython
+	LD_LIBRARY_PATH=$(INTELMKL) IPYTHONDIR=${CURDIR}/.ipython ./env/bin/ipython
 
 .PHONY: start
 start:
