@@ -6,8 +6,12 @@ dask
 dask[dataframe]
 ipykernel
 jupyter
+<<<<<<< HEAD
 jupyter_contrib_nbextensions
 kaggle
+=======
+lightgbm
+>>>>>>> a30126e... add lightgbm
 matplotlib
 numexpr
 numpy
@@ -18,7 +22,11 @@ pyarrow
 seaborn
 scikit-learn
 scipy
+sympy
+control
 statsmodels
 requests
 tqdm
 xlwt
+pystan
+arviz
