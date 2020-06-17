@@ -129,7 +129,7 @@ font_family = 'IPAPGothic' if is_ubuntu else 'Osaka'
 
 c.InlineBackend.rc = {
     'font.size': 11,
-    'font.family': font_family,
+#    'font.family': font_family,
     'figure.figsize': (5.0, 3.0),
 #    'figure.facecolor': (1, 1, 1, 0),
     'savefig.dpi': 80,

@@ -4,7 +4,9 @@ cmake
 cython
 dask
 dask[dataframe]
+google-cloud-bigquery
 ipykernel
+japanize-matplotlib
 jupyter
 jupyter_contrib_nbextensions
 kaggle
@@ -13,7 +15,6 @@ matplotlib
 numexpr
 numpy
 pandas
-pandas-gbq
 pandoc
 pyarrow
 seaborn
