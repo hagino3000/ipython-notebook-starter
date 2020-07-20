@@ -125,7 +125,7 @@ c.InteractiveShellApp.matplotlib = 'inline'
 import os
 is_ubuntu = 'Ubuntu' in str(os.uname())
 
-font_family = 'IPAPGothic' if is_ubuntu else 'Osaka'
+#font_family = 'IPAPGothic' if is_ubuntu else 'Osaka'
 
 c.InlineBackend.rc = {
     'font.size': 11,
