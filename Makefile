@@ -6,7 +6,7 @@ PYTHON:=./env/bin/python3
 
 .PHONY: setup
 setup:
-	${VIRTUALENV} -p /Library/Frameworks/Python.framework/Versions/3.8/bin/python3 ./env
+	${VIRTUALENV} -p /Library/Frameworks/Python.framework/Versions/3.7/bin/python3 ./env
 	./env/bin/pip install pip -U
 	./env/bin/pip install -r requirements.txt
 
