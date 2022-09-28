@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "datascience"
+version = "0.1.0"
+description = ""
+authors = ["Takashi Nishibayashi <takashi.nishibayashi@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ipykernel = "^6.16.0"
+numpy = "^1.23.3"
+pandas = "^1.5.0"
+matplotlib = "^3.6.0"
+seaborn = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

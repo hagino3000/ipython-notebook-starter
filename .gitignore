@@ -1,6 +1,7 @@
 # Generate python
 *.pyc
 *.pyo
+.venv
 
 # Generate virtualenv
 bin
