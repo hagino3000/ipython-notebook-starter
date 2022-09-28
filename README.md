@@ -3,10 +3,12 @@
 Startup sets for MacOSX or Linux
 
 
+## Requirements
+
+- poetry
+- Python 3.10
+
 ```
-$ brew install python3
-$ rehash
-$ pip3 install virtualenv
 $ make setup
 $ make start
 ```
