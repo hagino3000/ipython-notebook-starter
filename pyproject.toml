@@ -8,7 +8,7 @@ authors = ["Takashi Nishibayashi"]
 [tool.poetry.dependencies]
 python = "^3.10"
 jupyter = "^1.0.0"
-ipython = "^8.5.0"
+ipython = "^8.10.0"
 
 [tool.poetry.dev-dependencies]
 
