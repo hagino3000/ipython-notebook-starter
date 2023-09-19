@@ -6,9 +6,10 @@ description = "my jupyter environment"
 authors = ["Takashi Nishibayashi"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-jupyter = "^1.0.0"
+python = ">=3.10.0, <3.11"
 ipython = "^8.5.0"
+jupyter = "^1.0.0"
+ydata-profiling = "^4.5.1"
 
 [tool.poetry.dev-dependencies]
 
